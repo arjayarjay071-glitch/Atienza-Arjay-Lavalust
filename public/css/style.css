@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f5ee;
+    color: #2c2c2c;
+}
+
+.navbar {
+    background-color: #0b5d2e;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar .brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.logo-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #f0b429;
+    object-fit: cover;
+}
+
+.card h1 {
+    color: #0b5d2e;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.card p.subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.info-list p {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14.5px;
+    color: #333;
+}
+
+.info-list p strong {
+    color: #0b5d2e;
+    display: inline-block;
+    width: 110px;
+}
+
+.actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.actions a.btn-primary {
+    background-color: #0b5d2e;
+}
+
+.actions a.btn-accent {
+    background-color: #f0b429;
+    color: #5c3d00;
+}
+
+.actions a:hover {
+    opacity: 0.85;
+}
+
