@@ -742,6 +742,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
+        <p style="width:100%; text-align:center; color:#71717a; font-size:0.85rem; margin-bottom:1rem;">By: Arjay R. Atienza</p>
         <div class="footer-meta">
             <span>rendered in <span><?php echo lava_instance()->performance->elapsed_time('lavalust'); ?>s</span></span>
             <span>memory <span><?php echo lava_instance()->performance->memory_usage(); ?></span></span>
