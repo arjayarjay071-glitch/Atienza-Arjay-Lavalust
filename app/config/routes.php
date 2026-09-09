@@ -48,3 +48,11 @@ $router->get('/', 'Welcome::index');
 $router->get('/student', 'StudentController::index');
 $router->get('/student/profile', 'StudentController::profile')->middleware('student');
 $router->get('/users', 'Users::index');
+
+$router->get('/products', 'ProductController::index')->middleware('auth');
+$router->match('/products/create', 'ProductController::create', ['GET', 'POST'])->middleware('auth');
+$router->match('/products/edit/{id}', 'ProductController::edit', ['GET', 'POST'])->middleware('auth');
+$router->get('/products/delete/{id}', 'ProductController::delete')->middleware('auth');
+
+$router->match('/login', 'AuthController::login', ['GET', 'POST']);
+$router->get('/logout', 'AuthController::logout');
