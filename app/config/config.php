@@ -79,7 +79,7 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url']= 'http://127.0.0.1:3000/';
+$config['base_url'] = rtrim(getenv('APP_URL') ?: 'http://localhost:3000', '/') . '/';
 
 /*
 |--------------------------------------------------------------------------
