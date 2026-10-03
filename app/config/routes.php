@@ -56,3 +56,24 @@ $router->get('/products/delete/{id}', 'ProductController::delete')->middleware('
 
 $router->match('/login', 'AuthController::login', ['GET', 'POST']);
 $router->get('/logout', 'AuthController::logout');
+
+// Migration Routes
+//$router->get('create-migration/{migration_class}', 'MigrationController::create_migration');
+//$router->get('migrate', 'MigrationController::migrate');
+//$router->get('rollback', 'MigrationController::rollback');
+//$router->get('rollback-all', 'MigrationController::rollback_all');
+//$router->get('refresh', 'MigrationController::refresh');
+//$router->get('status', 'MigrationController::status');
+
+// ----- Lab 6 API: Auth -----
+$router->post('api/register', 'ApiAuthController::register');
+$router->post('api/login',    'ApiAuthController::login');
+$router->post('api/logout',   'ApiAuthController::logout');
+$router->post('api/refresh',  'ApiAuthController::refresh');
+
+// ----- Lab 6 API: Products (protected ng JWT sa loob ng controller) -----
+$router->get('api/products',         'ApiProductController::index');
+$router->get('api/products/{id}',    'ApiProductController::show');
+$router->post('api/products',        'ApiProductController::store');
+$router->put('api/products/{id}',    'ApiProductController::update');
+$router->delete('api/products/{id}', 'ApiProductController::destroy');
