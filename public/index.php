@@ -86,7 +86,8 @@ define('PUBLIC_DIR', $public_folder);
 
 
 // CORS (para makapag-request ang React frontend)
-header('Access-Control-Allow-Origin: *');
+// CORS (para makapag-request ang React frontend)
+header('Access-Control-Allow-Origin: https://product-frontend-l4s1.onrender.com');
 header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
@@ -94,11 +95,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
     exit;
 }
 
-
-header("Access-Control-Allow-Origin: https://product-frontend-l4s1.onrender.com");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(200); exit; }
+require_once SYSTEM_DIR . 'kernel/LavaLust.php';
 
 require_once SYSTEM_DIR . 'kernel/LavaLust.php';
 ?>
